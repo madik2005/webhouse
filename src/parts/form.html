@@ -1,0 +1,48 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="false" id="modalForm">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body form">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title" >Забронировать автомобиль</h5>
+        </div>
+        <form action="#" name="carForm" id="carForm">
+          <div class="form-row">
+              <input type="text" class="form-control py-3" name="name" placeholder="Ваше Имя" required>
+              <input type="tel" class="form-control py-3" name="phone" id="phone" placeholder="Телефон" required>
+                <select  class="form-control py-3" name="carType">
+                  <option value="">Выберите модель автомобиля</option>
+                  <option value="BMW">BMW</option>
+                  <option value="KIA">KIA</option>
+                  <option value="LADA">LADA</option>
+                </select>
+            <div class="form-group col-md-6 pl-0 pr-0 pr-lg-2 pt-3">
+              <div class="input-group date">
+                <input type="text" class="form-control pb-3" name="startDate" placeholder="Дата начала" autocomplete="off"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+              </div>
+            </div>
+            <div class="form-group col-md-6 pr-0 pl-0 pl-lg-2 pt-3">
+              <div class="input-group date">
+                <input type="text" class="form-control pb-3" name="endDate" placeholder="Дата окончания" autocomplete="off"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+              </div>
+            </div>
+              <textarea  class="form-control pb-2" name="text" cols="30" rows="2" placeholder="Дополнительная информация..." ></textarea>
+            <div class="form-group py-3">
+              <input type="checkbox" name="driver" id="driver">
+              <label for="driver">С водителем</label>
+            </div>
+              <input type="submit" class="w-100" value="Забронировать авто"></input>
+          </div>
+        </form>
+        <div class="modal-footer text-center">
+          <span class="legend">Наш менеджер свяжется с Вами в ближайшее время</span>
+        </div>
+      </div>  
+    </div> 
+  </div>   
+</div>
+
+
+

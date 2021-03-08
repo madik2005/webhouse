@@ -1,0 +1,301 @@
+
+@import "fonts";
+@import "icomoon";
+@import "bootstrap-datepicker.min";
+
+
+
+// Bootstrap 4 modules
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
+@import "node_modules/bootstrap/scss/_mixins"; 
+@import "node_modules/bootstrap/scss/_root";
+@import "node_modules/bootstrap/scss/_reboot";
+//@import "node_modules/bootstrap/scss/_type";
+//@import "node_modules/bootstrap/scss/_images";
+@import "node_modules/bootstrap/scss/_code";
+@import "node_modules/bootstrap/scss/_grid";
+//@import "node_modules/bootstrap/scss/_tables";
+@import "node_modules/bootstrap/scss/_forms";
+//@import "node_modules/bootstrap/scss/_buttons";
+//@import "node_modules/bootstrap/scss/_transitions";
+@import "node_modules/bootstrap/scss/_dropdown";
+//@import "node_modules/bootstrap/scss/_button-group";
+@import "node_modules/bootstrap/scss/_input-group";
+@import "node_modules/bootstrap/scss/_custom-forms";
+//@import "node_modules/bootstrap/scss/_nav";
+//@import "node_modules/bootstrap/scss/_navbar";
+//@import "node_modules/bootstrap/scss/_card";
+//@import "node_modules/bootstrap/scss/_breadcrumb";
+//import "node_modules/bootstrap/scss/_pagination";
+//@import "node_modules/bootstrap/scss/_badge";
+//@import "node_modules/bootstrap/scss/_jumbotron";
+//@import "node_modules/bootstrap/scss/_alert";
+//@import "node_modules/bootstrap/scss/_progress";
+//@import "node_modules/bootstrap/scss/_media";
+//@import "node_modules/bootstrap/scss/_list-group";
+@import "node_modules/bootstrap/scss/_close";
+//@import "node_modules/bootstrap/scss/_toasts";
+@import "node_modules/bootstrap/scss/_modal";
+//@import "node_modules/bootstrap/scss/_tooltip";
+//@import "node_modules/bootstrap/scss/_popover";
+//@import "node_modules/bootstrap/scss/_carousel";
+//@import "node_modules/bootstrap/scss/_spinners";
+@import "node_modules/bootstrap/scss/_utilities";
+//@import "node_modules/bootstrap/scss/_print";
+
+
+$color_main: #fabf4b;
+$color_text: #fff;
+$color_border:  #606060;
+$color_background: #1f1f1f;
+
+$font_bold: 'montserratextrabold', sans-serif;
+$font_regular: 'montserratregular', sans-serif;
+$font_medium: 'montserratmedium', sans-serif;
+
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: $color_background;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.openForm{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form input, .form select, .form textarea{
+    font-size: 0.875em!important;
+    font-family: $font_medium;
+}
+
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover, 
+.form input:-webkit-autofill:focus,
+.form textarea:-webkit-autofill,
+.form textarea:-webkit-autofill:hover,
+.form textarea:-webkit-autofill:focus,
+.form select:-webkit-autofill,
+.form select:-webkit-autofill:hover,
+.form select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $color_text !important;
+    -webkit-box-shadow: 0 0 0px 1000px $color_background inset;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+.form textarea{
+    resize: none;
+}
+.form textarea:focus::placeholder, input:focus::placeholder {
+    color: transparent;
+}
+
+.form select{
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../image/arrow-down.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.4em top 50%, 0 0;
+    background-size: .825em auto, 100%;
+}
+
+.form select option {
+    background-color:  $color_border !important;
+    font-size: 1.2em !important;
+}
+
+.openForm, .form input[type=submit]{
+    text-transform: uppercase;
+    font-family: $font_bold;
+    background-color: $color_main;
+    border: none;
+    border-radius: 5px;
+    min-height: 65px;
+    font-size: 1.2em!important;
+    padding-top: 9px;
+    transition: all .5s ease;
+
+}
+
+.openForm:hover,.form input[type=submit]:hover {
+	background: $color_background;
+	color: $color_main;
+	box-shadow: inset 0 0 0 4px $color_main;
+}
+
+.form-row{
+    margin: 0;
+}
+.form-control{
+    height: auto;
+    background-color: $color_background;
+    border: none;
+    border-bottom: 1px solid $color_border;
+    border-radius: 0;
+    padding: 0;
+    color:$color_text;
+}
+.form-control::placeholder {
+  color:$color_text;
+}
+
+.form-control:focus {
+    color: $color_text;
+    background-color:$color_background;
+    border-color: $color_border;
+    outline: 0;
+    box-shadow: none;
+    caret-color: $color_text;
+}
+
+.modal-body.form{
+    padding: 20px 30px;
+}
+
+.modal-content{
+    background-color: $color_background;
+    color: $color_text;
+    min-height: 630px;
+}
+.modal-header h5{
+    font-family: $font_regular;
+    font-size: 1.625em;
+}
+
+.modal-header {
+    padding: 35px 0px 10px 0px;
+}
+.modal-header, .modal-footer {
+    border:none;
+}
+.modal-footer {
+    justify-content:center;
+}
+.modal-footer>.legend {
+    color: $color_border;
+}
+
+.icon-calendar {
+    display: block;
+    color: $color_main;
+    font-size: 1.125em;
+    border-bottom: 1px solid $color_border;
+    padding-bottom: 14px;
+    padding-right: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.form .close{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: $color_text;
+    text-shadow: none;
+    opacity: 1;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: all .8s ease;
+}
+
+.form .close:hover{
+    color:  $color_main;
+    opacity: 1;
+}
+
+/*Datepicker*/
+.dropdown-menu{
+    padding: 1rem;
+    background-color: #4d4d4d;
+    color: $color_text;
+}
+.datepicker table tr td.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:hover {
+    background-image: linear-gradient(to bottom,$color_main,$color_main);
+    background-repeat: repeat-x;
+    border-color: $color_main;
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+    color: black;
+    text-shadow: none;
+}
+.datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled] {
+    background-color: $color_main;
+}
+td.day.focused, .datepicker table tr td.day:hover {
+    background: $color_background;
+}
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker table tr td span.focused, .datepicker table tr td span:hover, .datepicker tfoot tr th:hover {
+    background: $color_background;
+}
+.datepicker-dropdown:after {
+    border-bottom: 6px solid #4d4d4d;
+}
+
+/*Checkbox styles*/
+input[type="checkbox"] { 
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding: 7px 0px 0px 32px;
+    margin-bottom: 20px;
+    font: .875em $font_medium;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { 
+    margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4d4d4d;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    transition: all .12s, border-color .04s;
+}
+
+input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -3px;
+    left: 5px;
+    border-radius: 0;
+    border: 2px solid $color_main;
+    background: none;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+@media (min-width: 992px){
+    .modal-lg {
+        max-width: 690px;
+    }
+    .modal-body.form{
+    padding: 30px 65px 40px 65px;
+    }
+} 

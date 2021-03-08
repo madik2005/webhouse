@@ -1,0 +1,9 @@
+{
+    "name": "webhouse/webhouse",
+    "description": "form",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}
